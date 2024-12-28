@@ -1,0 +1,561 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Cookie&family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,400;8..144,500;8..144,600;8..144,700&display=swap');
+
+:root {
+    --bg-text-shadow: 0 2px 4px rgb(13 0 77 / 8%), 0 3px 6px rgb(13 0 77 / 8%), 0 8px 16px rgb(13 0 77 / 8%);
+    --bg-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.621);
+    --bodyBg:#303841;
+    --formBg:#343F4B;
+    --textColor:#fff;
+    --primaryColor:#0076A3;
+    --paraColor:#5e6c79;
+    --paraColor:#74828f;
+}
+*::-webkit-scrollbar{
+    width: .4rem;
+}
+*::-webkit-scrollbar-track{
+    background: linear-gradient(to bottom, #7B68EE, #B993D6);
+}
+*::-webkit-scrollbar-thumb{
+    background: #0040ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav{
+    position: fixed;
+    height: 60px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.279);
+    z-index: 200;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 100px;
+}
+
+nav ul{
+    width: 500px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 15px;
+    color: black;
+}
+
+ul li a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+ul li{
+    color: black;
+    text-decoration: none;
+    list-style: none;
+    cursor: pointer;
+}
+
+ul li:hover::after{
+    content: "";
+    position: absolute;
+    display: flex;
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    transition: ease 2s;
+}
+
+ul li a:hover{
+    color: black;
+}
+
+.logo {
+    height: 90%;
+    display: flex;
+    justify-content: center;
+}
+.logo .homel {
+    height: 100%;
+}
+
+.logo p {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    color: rgb(66, 68, 74);
+    text-shadow: var(--bg-text-shadow);
+}
+
+#firstsection{
+    height: 100vh;
+    background-color: rgba(175, 175, 222, 0.511);
+    width: 100%;
+}
+
+#firstsection .carousel-inner{
+    width: 100%;
+    height: 100vh;
+}
+#firstsection .carousel-inner::after{
+    content: "";
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(178, 170, 236, 0.533);
+}
+
+#firstsection .carousel-item{
+    overflow: hidden;
+}
+
+#firstsection .carousel-item img{
+    width: 100%;
+    height: 100vh;
+}
+
+
+#firstsection .welcomeline {
+    position: absolute; 
+    display: flex;
+    flex-direction: column; 
+    height: 100vh;
+    width: 100%;
+    justify-content: center; 
+    align-items: center; 
+    z-index: 100;
+    text-align: center;
+    color: #4a4a4a; 
+}
+
+#firstsection .welcome {
+    font-size: 1.5rem; 
+}
+
+#firstsection .hotel-name {
+    font-size: 3rem; 
+    font-weight: bold; 
+    position: relative;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: 2em;
+    letter-spacing: 4px;
+    overflow: hidden;
+    background: linear-gradient(90deg, #000, #9b9b9b, #000);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: animate 10s linear infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);   
+}
+
+@keyframes animate {
+    0% {
+      background-position: -500%;
+    }
+    100% {
+      background-position: 500%;
+    }
+}
+
+#secondsection {
+    position: relative;
+    height: auto; 
+    padding: 50px 0; 
+    background-color: rgba(255, 255, 255, 0.8); 
+}
+
+.ourroom {
+    position: relative; 
+    z-index: 1;
+    text-align: center; 
+}
+
+.head {
+    text-align: center;
+    font-size: 36px; 
+    margin-bottom: 40px;
+    color: #3C3D37; 
+}
+
+.roomselect {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 30px; 
+}
+
+.roombox {
+    background: radial-gradient(circle at 1.8% 4.8%, rgb(17, 23, 58) 0%, rgb(58, 85, 148) 90%);
+    border-radius: 30px; 
+    overflow: hidden; 
+    width: 300px; 
+    transition: transform 0.3s;
+}
+
+
+.roombox:hover {
+    transform: scale(1.05); 
+}
+
+.hotelphoto {
+    height: 250px; 
+    width: 100%; 
+    background-size: cover;
+}
+
+.h1{
+    background-image: url(../image/sur.jpg);
+}
+.h2{
+    background-image: url(../image/dl1.jpg);
+}
+.h3{
+    background-image: url(../image/gr2.jpg);
+}
+
+
+.roomdata {
+    padding: 20px; 
+    color: #fff;
+}
+
+.roomdata h2 {
+    font-size: 24px; 
+    margin-bottom: 10px; 
+}
+
+.services {
+    display: flex; 
+    justify-content: center; 
+    margin-bottom: 10px; 
+}
+
+.services i {
+    color: white; 
+    margin: 0 5px;
+}
+
+.bookbtn {
+    margin: 15px;
+}
+
+.bookbtn:hover {
+    background-color: #0033cc; 
+}
+
+.roomavailabilitycheck {
+    display: flex;
+    justify-content: center;
+    cursor: pointer; 
+    transition: background 0.3s; 
+}
+
+.roomavailabilitycheck:hover {
+    background-color: #001A6E; 
+}
+/* */
+#contact{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 90%;
+    max-width: 550px;
+    margin: auto;
+    margin-top: 2em;
+}
+
+.contactHeader{
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 36px;
+    color: var(--primaryColor);
+    margin-bottom: .5em;
+}
+
+.heading,.sub-heading{
+    margin-bottom: .5em;
+    font-weight: bold;
+}
+
+.heading{
+    font-size: 2.5em;
+}
+
+.sub-heading{
+    text-align: left;
+}
+
+.contactForm{
+    display: grid;
+    gap: 3em;
+}
+
+form{
+    width: 100%;
+    margin-top: 3em;
+}
+
+.para{
+    color: var(--paraColor);
+    font-size: 1.1rem;
+    line-height: 1.5em;
+    margin-bottom: 1em;
+}
+
+.para2{
+    text-align: justify;
+}
+
+.input{
+    width: 95%;
+    max-width: 700px;
+    border: none;
+    font-size: .9rem;
+    padding: 1em;
+    outline: none;
+    background-color: var(--formBg);
+    color: var(--paraColor);
+    border-radius: 10px;
+    border: 1px solid rgb(53, 53, 53);
+    margin-bottom: 1em;
+
+}
+
+.input:focus{
+    border: 1px solid var(--primaryColor);
+}
+
+.input::placeholder{
+    text-transform: capitalize;
+}
+
+.submit{
+    background-color: var(--primaryColor);
+    border: none;
+    color: var(--textColor);
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+}
+
+.map-container{
+    position: relative;
+    width: 660px;
+    height: 660px;
+}
+
+.map{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 90%;
+    height: 90%;
+}
+
+.map iframe{
+    width: 100%;
+    height: 100%;
+}
+
+.contactMethod{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+    text-align: left;
+}
+
+.method{
+    display: flex;
+    align-items: center;
+}
+
+.contactIcon{
+    font-size: 2rem;
+    color: var(--primaryColor);
+    width: 70px;
+}
+
+
+#allright{
+    height: 70px;
+    width: 100%;
+    background: radial-gradient(circle at 1.8% 4.8%, rgb(17, 23, 58) 0%, rgb(58, 85, 148) 90%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:0 100px;
+}
+
+#allright .createdby{
+    color: white;
+}
+
+
+@media(max-width: 30rem){
+    nav{
+        justify-content: center;
+        position: relative;
+        background-color: #96a8f88c;
+    }
+    nav ul{
+        display: none;
+    }
+    #firstsection{
+        height: 50vh;
+        text-align: center;
+    }
+    #firstsection .carousel-inner{
+        height: 50vh;
+    }
+    #firstsection .carousel-inner::after{
+        height: 50vh;
+    }
+    #firstsection .carousel-item img{
+        height: 50vh;
+    }
+    #firstsection .welcomeline{
+        height: 50vh;
+        
+    }
+    #firstsection .welcometag{
+        text-align: center;
+        font-size: 50px;
+        line-height: 60px;
+    }
+    #secondsection{
+        height: auto;
+    }
+    #secondsection{
+        height: 240vh;
+    }
+    #secondsection img{
+        display: none;
+    }
+    .ourroom{
+        top: 30px;
+        height: auto;
+    }
+    .roomselect{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .roomselect .roombox{
+        width: 75%;
+    }
+
+
+    #thirdsection{
+        height: 100vh;
+    }
+    .facility{
+        height: 70%;
+        flex-wrap: wrap;
+    }
+    .facility .box{
+        margin: 0;
+        padding: 0;
+        height: 55%;
+        width: 50%; 
+    }
+
+    .facility .box h2{
+        font-size: 18px;
+        flex-wrap: wrap;
+    }
+    
+    .box:nth-child(5){
+        display: none;
+    }
+
+    #contactus{
+        padding: 0 30px;
+    }
+}
+
+
+.price-row {
+	width: 90%;
+	max-width: 1100px;
+	margin: auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	grid-gap: 25px;
+}
+
+.price-col {
+	background: radial-gradient(circle at 1.8% 4.8%, rgb(17, 23, 58) 0%, rgb(58, 85, 148) 90%);
+	padding: 10% 15%;
+	border-radius: 10px;
+	color: #fff;
+	text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; 
+}
+
+
+.price-col p {
+	font-size: 22px;
+}
+
+.price-col h3 {
+	font-size: 44px;
+	margin: 20px 0 40px;
+	font-weight: 500;
+}
+
+.price-col h3 span {
+	font-size: 16px;
+}
+
+.price-col ul {
+	text-align: left;
+	margin: 20px 0;
+	color: linear-gradient(to bottom, #7B68EE, #B993D6);
+}
+
+.price-col ul li {
+	margin: 20px 0;
+	size: 20px;
+    color: white;
+}
+
+.price-col button {
+    margin: 40px 0;
+    width: 100%;
+    padding: 14px 0; 
+    background: transparent; 
+    color: #fff; 
+    font-size: 15px; 
+    border: 2px solid #fff; 
+    border-radius: 6px; 
+    cursor: pointer; 
+    transition: background 0.5s, color 0.3s; 
+}
+
+.price-col button:hover {
+    background: linear-gradient(to bottom, #292845, #444278); 
+}
+
+@media screen and (min-width:800px) {
+    #contact{
+        max-width: 1100px;
+    }
+    .contactForm{
+        grid-template-columns: 1fr 1fr;
+    }   
+
+    .contactMethod{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
